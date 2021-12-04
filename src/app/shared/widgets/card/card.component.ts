@@ -14,6 +14,7 @@ export class CardComponent implements OnInit {
   @Input() label: string = '';
   @Input() total: string = '';
   @Input() percentage: string = '';
+  @Input() data: Object = [];
 
   constructor() {}
 
@@ -66,7 +67,7 @@ export class CardComponent implements OnInit {
       },
       series: [
         {
-          data: [71, 78, 39, 66],
+          data: this.data,
         },
       ],
     };

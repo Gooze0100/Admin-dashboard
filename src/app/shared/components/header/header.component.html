@@ -1,4 +1,7 @@
-<mat-toolbar color="primary">
+<mat-toolbar
+  (scroll)="onScroll()"
+  [ngClass]="navBarFixed ? 'fixed' : 'notFixed'"
+>
   <mat-toolbar-row>
     <button mat-icon-button (click)="toggleSideBar()">
       <mat-icon>menu</mat-icon>
